@@ -26,12 +26,9 @@ ok      go-hello-world/hello    0.138s
 ## Usage
 
 ```go
-import "fmt"
-
-import "rsc.io/quote"
 
 func main() {
-	fmt.Println("Hello, World :D")
+	fmt.Println(Hello())
 	fmt.Println(quote.Go())
 }
 
