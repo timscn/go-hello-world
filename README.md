@@ -1,4 +1,4 @@
-# Foobar
+# Hello World
 
 Hello World is my first Project which is based on Go.
 
