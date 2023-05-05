@@ -1,4 +1,4 @@
-module go-hello-world/helloworld
+module go-hello-world/hello
 
 go 1.20
 

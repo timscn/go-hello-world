@@ -7,6 +7,17 @@ Hello World is my first Project which is based on Go.
 Use the following command to run:
 
 ```shell
+d:~/GoHome/go-hello-world (👋) $ go run .
+[vd@Fri May 05 go-hello-world]$ go run .
+Hello, world :D
+Don't communicate by sharing memory, share memory by communicating.
+[vd@Fri May 05 go-hello-world]$ 
+```
+## Test
+
+Use the following command to test it :
+
+```shell
 foo@foo go-hello-world % go run .
 Hello, World :D
 Don't communicate by sharing memory, share memory by communicating.

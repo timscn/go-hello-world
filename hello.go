@@ -1,10 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-import "rsc.io/quote"
+	"rsc.io/quote"
+)
+
+func Hello() string {
+	return "Hello, world :D"
+}
 
 func main() {
-	fmt.Println("Hello, World :D")
+	fmt.Println(Hello())
 	fmt.Println(quote.Go())
 }
