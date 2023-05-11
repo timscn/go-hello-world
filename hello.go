@@ -12,12 +12,6 @@ import (
 const MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY int = 10, 20, 30, 40, 50, 60
 
 func main() {
-	// value, err := Hello1()
-	// if err != nil {
-	// 	log.Fatal(err)
-	// } else {
-	// 	fmt.Println(value)
-	// }
 	const TESTME = "test struct"
 	const MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY int = 1, 2, 3, 4, 5, 6
 	println(TESTME, TUESDAY)
@@ -25,23 +19,23 @@ func main() {
 	println(p.FirstName)
 	println(p.LastName)
 	println(p.Age)
-	// viktor := User{firstName: "etr", lastNmae: "ewrwe"}
-	// fmt.Println(viktor)
+	viktor := User{firstName: "etr", lastNmae: "ewrwe"}
+	fmt.Println(viktor)
 
-	// fmt.Println(quote.Go())
-	// fmt.Println("before Map")
-	// id := 1
-	// mapData := helloMap()s
-	// value, idForCheck := mapData[id]
-	// if idForCheck == true {
-	// 	fmt.Println("the is: ", id, "value is: ", value)
-	// }
-	// delete(mapData, 1)
-	// fmt.Println("loop throught the entire mapdata")
-	// for key, value := range mapData {
+	fmt.Println(quote.Go())
+	fmt.Println("before Map")
+	id := 1
+	mapData := helloMap()s
+	value, idForCheck := mapData[id]
+	if idForCheck == true {
+		fmt.Println("the is: ", id, "value is: ", value)
+	}
+	delete(mapData, 1)
+	fmt.Println("loop throught the entire mapdata")
+	for key, value := range mapData {
 
-	// 	fmt.Println(key, value)
-	// }
+		fmt.Println(key, value)
+	}
 	fmt.Println("Finally I'm here :D")
 	i1 := 19
 	var j1 = i1
