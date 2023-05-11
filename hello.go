@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	userdata "go-hello-world/entities"
+	"go-hello-world/strutil"
+	"log"
+	"runtime"
 	"time"
 )
 
@@ -46,7 +49,7 @@ func main() {
 	fmt.Printf("Address of i1=%d:\t%p\n", i1, &i1)
 	fmt.Printf("Address of j1=%d:\t%p\n", j1, &j1)
 	var b bool
-	fmt.Println(b)
+	fmt.Printf("%T\n", b)
 	// fmt.Println(helloMap())
 
 	fahrenheitValue, err := toFahrenheit(112)
@@ -84,4 +87,43 @@ func main() {
 	fmt.Println("after loopConditionbased")
 	fmt.Println("abs")
 	fmt.Println(abs(-10))
+	fmt.Println("Testing pkg strUtils")
+	fmt.Println(strutil.Reverse("olleh"))
+	fmt.Println("Im working on FizzBuss")
+	checkFizzBuss()
+	fmt.Println("Testing pkg challengeF")
+	// f1, f2, f3 := twoum(3, 4)
+	// fmt.Println(f1, f2, f3)
+	fmt.Println(sumInts(5, -2, 0, 9))
+	fmt.Println("Testing pkg challengeF - Fib sequence")
+	result := 0
+	for i := 0; i <= 4; i++ {
+		result = fibonacci(i)
+		fmt.Println("So Fib number is: ", result)
+	}
+	fmt.Println("Factorial is: ", factorial(13))
+	lFunction := lambdaTest(10)
+	fmt.Println("Test Lambda function", lFunction(10))
+
+	fmt.Println("Debugging with Closures")
+	log.SetFlags(log.Llongfile)
+	var where = log.Print
+	a := 2 * 2
+	where()
+	fmt.Println(a)
+
+	where12 := func() { // debugging function
+		_, file, line, _ := runtime.Caller(1)
+		log.Printf("%s:%d", file, line)
+	}
+	b12 := 2 * 2
+	where12()
+	fmt.Println(b12)
+
+	fmt.Println("Timing a function")
+	start := time.Now()
+	Calculation()
+	end := time.Now()
+	delta := end.Sub(start)
+	fmt.Printf("Calculation took this amount of time: %s\n", delta)
 }
