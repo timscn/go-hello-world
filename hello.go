@@ -26,7 +26,7 @@ func main() {
 	id := 1
 	mapData := helloMap()
 	value, idForCheck := mapData[id]
-	if idForCheck == true {
+	if idForCheck {
 		fmt.Println("the is: ", id, "value is: ", value)
 	}
 	delete(mapData, 1)
