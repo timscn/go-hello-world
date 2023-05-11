@@ -7,6 +7,8 @@ import (
 	"log"
 	"runtime"
 	"time"
+
+	"rsc.io/quote"
 )
 
 const MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY int = 10, 20, 30, 40, 50, 60
@@ -19,13 +21,10 @@ func main() {
 	println(p.FirstName)
 	println(p.LastName)
 	println(p.Age)
-	viktor := User{firstName: "etr", lastNmae: "ewrwe"}
-	fmt.Println(viktor)
-
 	fmt.Println(quote.Go())
 	fmt.Println("before Map")
 	id := 1
-	mapData := helloMap()s
+	mapData := helloMap()
 	value, idForCheck := mapData[id]
 	if idForCheck == true {
 		fmt.Println("the is: ", id, "value is: ", value)
@@ -33,7 +32,6 @@ func main() {
 	delete(mapData, 1)
 	fmt.Println("loop throught the entire mapdata")
 	for key, value := range mapData {
-
 		fmt.Println(key, value)
 	}
 	fmt.Println("Finally I'm here :D")
@@ -86,8 +84,8 @@ func main() {
 	fmt.Println("Im working on FizzBuss")
 	checkFizzBuss()
 	fmt.Println("Testing pkg challengeF")
-	// f1, f2, f3 := twoum(3, 4)
-	// fmt.Println(f1, f2, f3)
+	f1, f2, f3 := twoum(3, 4)
+	fmt.Println(f1, f2, f3)
 	fmt.Println(sumInts(5, -2, 0, 9))
 	fmt.Println("Testing pkg challengeF - Fib sequence")
 	result := 0
