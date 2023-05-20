@@ -6,7 +6,7 @@ func getAddressOfVar(digit int) *int {
 	return &digit
 }
 
-func main() {
+func main77777() {
 	a := 5
 	b := &a
 
