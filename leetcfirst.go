@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main6666() {
 	// 1480. Running Sum of 1D Array
 	ids := []int{3, 1, 2, 10, 1}
 	for i := 1; i < len(ids); i++ {
