@@ -13,7 +13,7 @@ import (
 
 const MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY int = 10, 20, 30, 40, 50, 60
 
-func main() {
+func mainOldOne() {
 	const TESTME = "test struct"
 	const MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY int = 1, 2, 3, 4, 5, 6
 	println(TESTME, TUESDAY)
