@@ -6,7 +6,7 @@ import (
 	"reflect"
 )
 
-func main() {
+func mainInterfaceFuture() {
 	std1 := userdata.User{Name: "Vani"}
 	fmt.Println(std1)
 	std1.FillDefaultUser()
