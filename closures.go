@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func main090909() {
 	sum := closure()
 	for i := 0; i < 10; i++ {
 		fmt.Println(sum(i))
