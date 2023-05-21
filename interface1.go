@@ -32,7 +32,7 @@ func (python Python) getDevelopedBy() string {
 	return python.DevelopedBy
 }
 
-func main() {
+func mainI2() {
 	// creating an instance of interface 'Language'
 	var ILanguage Language
 
