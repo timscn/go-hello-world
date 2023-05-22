@@ -76,7 +76,7 @@ func multiDimenstion() {
 	}
 }
 
-func main() {
+func mainArray2() {
 	sla := []int{2, 6, 4, -10, 8, 89, 12, 68, -45, 37}
 	fmt.Println("before sort: ", sla)
 	bubbleSort(sla)
