@@ -20,7 +20,7 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 	tpl.Execute(w, nil)
 }
 
-func main() {
+func mainWeb() {
 	err := godotenv.Load()
 	if err != nil {
 		log.Println("Error loading .env file")
