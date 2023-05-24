@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func main() {
+func mainR() {
 	originalStr := "Google"
 	reverseStr := make([]byte, len(originalStr))
 	iteratorForReverse := 0
@@ -24,6 +24,6 @@ func main() {
 	for _, item := range items {
 		item *= 2
 	}
-	fmt.Println("math.MinInt32 is: ", math.MinInt32)
+	fmt.Println("math.MiginInt32 is: ", math.MinInt32)
 	fmt.Println("math.MaxInt32 is: ", math.MaxInt32)
 }
