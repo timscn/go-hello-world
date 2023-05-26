@@ -47,7 +47,7 @@ func calculate(s Shape) {
 }
 
 // main function
-func main() {
+func mainIF() {
 
 	// assigns value to struct members
 	// rectangle := Rectangle{7, 4}

@@ -26,7 +26,7 @@ func GreetingsForPlayer(p Player) string {
 	return str + strconv.Itoa(p.GameId)
 }
 
-func main() {
+func main1239999() {
 	p := Player{}
 	p.u.Id = 1
 	p.u.Name = "V"

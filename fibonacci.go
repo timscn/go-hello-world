@@ -23,3 +23,12 @@ func fibs(n int) []int64 {
 	}
 	return fibArray
 }
+
+func fibChannel(ch chan int, n int) {
+	x, y := 0, 1
+	for i := 0; i < n; i++ {
+		ch <- i
+		x, y = y, x+y
+	}
+	close(ch)
+}
