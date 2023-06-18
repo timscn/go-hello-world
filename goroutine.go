@@ -11,6 +11,10 @@ import (
 	"time"
 )
 
+type MyConstraint interface {
+	int | float64 | float32
+}
+
 func main() {
 	go say("hello")
 	say("world")
@@ -88,6 +92,49 @@ func main() {
 	fmt.Println("val changeMePtr is: ", val)
 	fmt.Println("val address is: ", &val)
 	fmt.Println("val changeMePtr is: ", val)
+
+	fmt.Println("printGenerics...")
+	fmt.Println("printGenerics: ", printGenerics(2, 3))
+	fmt.Println("printGenerics: ", printGenerics(22.3, 33.9))
+
+	fmt.Println("printGenerics: ", printGenerics(22.3, 33.9))
+
+	fmt.Println("Getting started with generics..")
+
+	ints := map[string]int{
+		"first":  34,
+		"second": 12,
+	}
+
+	// Initialize a map for the float values
+	floats := map[string]float64{
+		"first":  35.98,
+		"second": 26.99,
+	}
+
+	fmt.Printf("Non-Generic Sums: %v and %v\n",
+		sumIntsG(ints),
+		sumFloatsG(floats))
+
+	fmt.Printf("Generic Sums: %v and %v\n",
+		sumIntsOrFloatsG[int](ints),
+		sumIntsOrFloatsG[float64](floats))
+
+	fmt.Printf("Generic Sums with Constraint: %v and %v\n",
+		sumNumbers(ints),
+		sumNumbers(floats))
+
+	fmt.Println("Testing Composition: ")
+	contact1 := Contact{name: "GoodName", phone: "+12429029"}
+	businessContact := BusinessContact{contact1, "Argentina"}
+	businessContact.info()
+
+	fmt.Println("printMeDefined...")
+	printMeDefined()
+}
+
+func printGenerics[T MyConstraint](x T, y T) T {
+	return x + y
 }
 
 func changeMePtr(val *int) {
