@@ -166,3 +166,20 @@ func sumChan(a []int, c chan int) {
 	}
 	c <- sum
 }
+
+func findNumbers() int {
+	nums := []int{12, 345, 2, 6, 7896}
+	fmt.Println("nums: ", nums)
+	returnCount := 0
+	for _, value := range nums {
+		totalDigits := 0
+		for value > 0 {
+			value /= 10
+			totalDigits++
+		}
+		if totalDigits%2 == 0 {
+			returnCount++
+		}
+	}
+	return returnCount
+}
